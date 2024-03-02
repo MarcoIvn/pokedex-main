@@ -8,5 +8,17 @@
 }
 
 .Stadistics{
-  @apply m-4 items-center grid grid-cols-2 gap-4 p-4 rounded-2xl text-xl font-bold;
+  @apply mt-1 items-center grid grid-cols-2 gap-4 p-4 rounded-2xl text-xl font-bold;
+}
+
+.MovementsList{
+  @apply bg-yellow-400 text-white text-xl font-bold rounded-xl m-4
+}
+
+.SpecieName{
+  @apply bg-green-400 text-white text-xl font-bold rounded-xl m-4
+}
+
+.SkillsList{
+  @apply bg-blue-400 text-white text-xl font-bold rounded-xl m-4
 }

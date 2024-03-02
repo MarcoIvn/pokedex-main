@@ -23,35 +23,32 @@ export default function PokemonComponent(props:PokemonComponentProps) {
                     ))}
                   </ul>
                 </div>
-                <div className="w-1/2">
-                <div className="bg-gray-200 p-4">
-                    <h1>Movimientos</h1>
+                <div className="flex mx-12 ml-12 ">
+                  <div className="Movements m-6">
+                      <h1 className="text-xl font-bold">Movimientos</h1>
+                      <ul>
+                      {props.pokemon.moves.map((move,index)=>{
+                          return (
+                          <li className="MovementsList" key={index}>
+                              {move.move.name}
+                          </li>
+                          )
+                      })}
+                      </ul>
+                  </div>
+                  <div className="Specie m-6">
+                    <h1 className="text-xl font-bold">Especie</h1>
+                    <p className="SpecieName">{props.pokemon.species.name}</p>
+                  </div>
+                  <div className="Skills m-6">
+                    <h1 className="text-xl font-bold">Habilidades</h1>
                     <ul>
-                    {props.pokemon.moves.map((move,index)=>{
-                        return (
-                        <li key={index}>
-                            {move.move.name}
-                        </li>
-                        )
-                    })}
+                      {props.pokemon.abilities?.map((ability, index) => (
+                        <li className="SkillsList" key={index}>{ability.ability.name}</li>
+                      ))}
                     </ul>
+                  </div>
                 </div>
-                <div className="bg-gray-200 p-4">
-                  <h1>Especie</h1>
-                  <p>{props.pokemon.species.name}</p>
-                </div>
-                <div className="bg-gray-200 p-4">
-                  <h1>Habilidades</h1>
-                  <ul>
-                    {props.pokemon.abilities?.map((ability, index) => (
-                      <li key={index}>{ability.ability.name}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                
-
-            </div>
             </div>
             
         </div>
